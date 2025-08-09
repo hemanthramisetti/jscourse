@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style> 
+    #starton
+    {
+        background-color: green;
+    }
+        #closeon
+        {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="starton">start on</button>
+    <button id="closeon">close on</button>
+  
+</body>
+<script>
+    let timer=null;
+    document.getElementById("starton")
+    .addEventListener("click",function(){
+      timer=setTimeout(function(){
+    console.log("some rask");
+  },5000)
+    })
+
+
+    document.getElementById("closeon")
+    .addEventListener("click",function(){
+        clearTimeout(timer);
+
+    })
+        
+    
+
+</script>
+</html>
